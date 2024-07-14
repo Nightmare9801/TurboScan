@@ -1,0 +1,64 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'TurboScan'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=TurboScan",
+                    "--package=TurboScan"
+                ],
+                "filter": {
+                    "name": "TurboScan",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'TurboScan'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=TurboScan",
+                    "--package=TurboScan"
+                ],
+                "filter": {
+                    "name": "TurboScan",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug benchmark 'search'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bench=search",
+                    "--package=TurboScan"
+                ],
+                "filter": {
+                    "name": "search",
+                    "kind": "bench"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
