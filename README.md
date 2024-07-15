@@ -26,7 +26,7 @@ To use TurboScan, type the following commands.
 ```bash
   cd TurboScan
   cargo run --release
-  search <DIR> <FILE_Name>
+  search <DIR> <FILE_NAME>
 ```
 
 ## Contributing
